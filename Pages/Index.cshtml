@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Todo List";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<a class="btn btn-primary" href="/Create">Add new item</a>
+
+<div class="list-group">
+    @foreach (var item in Model.Items)
+    {
+        <div class="list-group-item">
+            <h5 class="mb-1">@item.Title</h5>
+            <p class="mb-1">Status: @(item.IsDone ? "Done" : "Not Done")</p>
+            <a class="btn btn-secondary" href="/Edit?id=@item.Id">Edit</a>
+            <a class="btn btn-danger" href="/Delete?id=@item.Id">Delete</a>
+        </div>
+    }
+</div>

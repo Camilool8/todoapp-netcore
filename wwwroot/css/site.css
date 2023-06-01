@@ -1,0 +1,32 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.list-group-item{
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+    .list-group-item:hover {
+        box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+h5{
+    border-bottom: 1px solid #ccc;
+}
+

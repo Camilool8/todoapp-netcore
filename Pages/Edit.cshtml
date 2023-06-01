@@ -1,0 +1,20 @@
+﻿@page
+@model EditModel
+@{
+    Layout = "_Layout";
+}
+
+<h2>Edit Todo Item</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Item.Id" />
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input id="title" name="Item.Title" value="@Model.Item.Title" class="form-control" />
+    </div>
+    <div class="form-check">
+        <input type="checkbox" id="isDone" name="Item.IsDone" value="true" @(Model.Item.IsDone ? "checked" : "") class="form-check-input" />
+        <label for="isDone" class="form-check-label">Done</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
